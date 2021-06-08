@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="../asset/css/admin.css"> 
+    <link rel="stylesheet" type="text/css" href="../asset/fonts/Font-Awesome-master/css/all.min.css">
+    <link rel="icon" type="image/png" href="../asset/images/harbas1.ico" />
+    <title>Dashboard Guru</title>
+  </head>
+  <body>
+   <!-- membuat header navigasi pada dashboard-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-warning fixed-top">
+    <a class="navbar-brand" href="#">Selamat Datang Guru</a>
+
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <!--untuk pemisah navigasi-->
+      <div class="mr-auto"></div>
+
+      <ul class="navbar-nav">
+        <!--untuk menampilkan title pada icon ketika diarahkan ke icon tersebut-->
+          <li class="nav-item dropdown">
+              <a class="btn btn-default" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="fas fa-bell mr-3"  data-toogle="tooltip"  title="Notifikasi "><span class="badge">1</span></i>
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="nav-link" href="#">Anda saat ini mengajar<span class="sr-only">(current)</span></a>
+              </div>
+          </li>
+          <li class="nav-item">
+            <a class="btn btn-default" href="Dpengaturan.html" aria-label="Settings">
+              <i class="fas fa-user mr-3" data-toogle="tooltip"  title="Pengaturan " aria-hidden="true"></i>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="btn btn-default" href="../LGuru.html" aria-label="Settings">
+              <i class="fas fa-sign-out-alt  mr-3" data-toogle="tooltip"  title="Keluar "></i>
+            </a>
+          </li>
+      </ul>
+    </div>
+    </nav>
+
+      <div class="row no-gutters mt-5 " >
+        <!-- untuk sidebar-->       
+        <div class="col-md-2 bg-dark mt-2 pr-3 pt-4" style="height: 665px;">
+            <!--set margin, dan paddinng pada sidebar nya-->  
+            <ul class="nav flex-column ml-3 mb-5" >
+                 
+                <li class="nav-item " >
+                    <!--merubah tulisan supaya tidak auto disetiap a href nya -->
+                    <!--menambahkan garis bisa make hr atau border bottom-->
+                    <!--menambahkan hover-->
+                    <a class="nav-link active text-white" href="Ddashboard.html">
+                      <i class="fas fa-tachometer-alt mr-2"></i> Dashboard</a><hr class="bg-secondary">
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link text-white" href="Dcuriculum.html"> <i class="fas fa-user-graduate mr-2 "></i>Kurikulum</a><hr class="bg-secondary">
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link text-white" href="Dmyclass.html"> <i class="fas fa-chalkboard-teacher mr-2"></i>Kelas</a><hr class="bg-secondary">
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      <i class="fas fa-chalkboard-teacher mr-2"></i>
+                      Ujian
+                    </a>
+                    <div class="dropdown-menu bg-dark" aria-labelledby="navbarDropdown">
+                      <a class="dropdown-item text-white" href="Duts.html"><i class="fas fa-book mr-2"></i>UTS</a>
+                      <a class="dropdown-item text-white" href="Duas.html"><i class="fas fa-book mr-2"></i>UAS</a>
+                    </div>
+                  </li>
+                    <hr class="bg-secondary">
+                  </li>
+  
+                  <li class="nav-item">
+                      <a class="nav-link text-white" href="Dnilaisiswa.html"><i class="fas fa-paper-plane mr-2"></i> Nilai Siswa</a><hr class="bg-secondary">
+                    </li>    
+              </ul>
+        </div>
+        <!--untuk kontent-->
+            <div class="col-md-10 p-5 pt-2">
+                <h3> 
+                <i class="fas fa-tachometer-alt mr-2"> Dashboard</i><hr>
+                <div class="row text-white">
+                    <div class="card bg-info ml-5" style="width: 18rem;">
+                    
+                        <div class="card-body">
+                            <div class="card-body-icon">
+                                <i class="fas fa-user-graduate mr-2 "></i>
+                            </div>
+                          <h4 class="card-title">JUMLAH SISWA</h4>
+                            <div class="display-4">
+                                900
+                            </div>
+                            <a href="">
+                                <p1 class="card-text text-white">more
+                                    <i class="fas-fa-angle-double-right ml-2"></i>
+                                </p1>
+                            </a>
+                        </div>
+                    
+                    </div>
+                        <!--untuk info guru-->
+                        <div class="card bg-success ml-5" style="width: 18rem;">
+                    
+                            <div class="card-body">
+                                <div class="card-body-icon">
+                                    <i class="fas fa-chalkboard-teacher mr-2"></i>
+                                </div>
+                              <h4 class="card-title">JUMLAH GURU</h4>
+                                <div class="display-4">
+                                    50
+                                </div>
+                                <a href="">
+                                    <p1 class="card-text text-white">more
+                                        <i class="fas-fa-angle-double-right ml-2"></i>
+                                   </p1>
+                                </a>
+                            </div>
+                        </div>    
+                        
+                           <!--untuk info guru-->
+                           <div class="card bg-danger ml-5" style="width: 18rem;">
+                    
+                            <div class="card-body">
+                                <div class="card-body-icon">
+                                    <i class="fas fa-chalkboard-teacher mr-2"></i>
+                                </div>
+                              <h4 class="card-title">JUMLAH PEGAWAI</h4>
+                                <div class="display-4">
+                                    250
+                                </div>
+                                <a href="">
+                                    <p1 class="card-text text-white">more
+                                        <i class="fas-fa-angle-double-right ml-2"></i>
+                                   </p1>
+                                </a>
+                            </div>
+                        </div>  
+                    </div>
+                </h3>
+            </div>
+      
+        </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="../js/Guru.js"></script>
+</body>
+</html>

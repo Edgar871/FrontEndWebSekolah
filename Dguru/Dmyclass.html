@@ -1,0 +1,303 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="../asset/css/admin.css"> 
+    <link rel="stylesheet" type="text/css" href="../asset/fonts/Font-Awesome-master/css/all.min.css">
+    <link rel="icon" type="image/png" href="../asset/images/harbas1.ico" />
+    <title>Dashboard Guru</title>
+  </head>
+  <body>
+   <!-- membuat header navigasi pada dashboard-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-warning fixed-top">
+        <a class="navbar-brand" href="#">Selamat Datang Guru</a>
+      
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <!--untuk pemisah navigasi-->
+          <div class="mr-auto"></div>
+    
+          <ul class="navbar-nav">
+            <!--untuk menampilkan title pada icon ketika diarahkan ke icon tersebut-->
+              <li class="nav-item dropdown">
+                  <a class="btn btn-default" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="fas fa-bell mr-3"  data-toogle="tooltip"  title="Notifikasi "><span class="badge">1</span></i>
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <a class="nav-link" href="#">Anda saat ini mengajar<span class="sr-only">(current)</span></a>
+                  </div>
+              </li>
+              <li class="nav-item">
+                <a class="btn btn-default" href="Dpengaturan.html" aria-label="Settings">
+                  <i class="fas fa-user mr-3" data-toogle="tooltip"  title="Pengaturan " aria-hidden="true"></i>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="btn btn-default" href="../LGuru.html" aria-label="Settings">
+                  <i class="fas fa-sign-out-alt  mr-3" data-toogle="tooltip"  title="Keluar "></i>
+                </a>
+              </li>
+          </ul>
+        </div>
+      </nav>
+
+      <div class="row no-gutters mt-5" >
+        <!-- untuk sidebar-->       
+        <div class="col-md-2 bg-dark mt-2 pr-3 pt-4" style="height: 665px;">
+            <!--set margin, dan paddinng pada sidebar nya-->  
+            <ul class="nav flex-column ml-3 mb-5">
+            <li class="nav-item " >
+                    <!--merubah tulisan supaya tidak auto disetiap a href nya -->
+                    <!--menambahkan garis bisa make hr atau border bottom-->
+                    <!--menambahkan hover-->
+                  <a class="nav-link active text-white" href="Ddashboard.html">
+                    <i class="fas fa-tachometer-alt mr-2"></i> Dashboard</a><hr class="bg-secondary">
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-white" href="Dcuriculum.html"> <i class="fas fa-user-graduate mr-2 "></i>Kurikulum</a><hr class="bg-secondary">
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-white" href="Dmyclass.html"> <i class="fas fa-chalkboard-teacher mr-2"></i>Kelas</a><hr class="bg-secondary">
+                </li>
+				        <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="fas fa-chalkboard-teacher mr-2"></i>
+                    Ujian
+                  </a>
+                  <div class="dropdown-menu bg-dark" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item text-white" href="Duts.html"><i class="fas fa-book mr-2"></i>UTS</a>
+                    <a class="dropdown-item text-white" href="Duas.html"><i class="fas fa-book mr-2"></i>UAS</a>
+                  </div>
+                </li>
+                  <hr class="bg-secondary">
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="Dnilaisiswa.html"><i class="fas fa-paper-plane mr-2"></i> Nilai Siswa</a><hr class="bg-secondary">
+                  </li>    
+            </ul>
+        </div>
+        <!--untuk kontent-->
+            <div class="col-md-10 p-5 pt-2">
+                <h3> 
+                  <i class="fas fa-user-graduate mr-2 "> My Class </i><hr>
+                </h3>
+                <ul class="nav nav-tabs" id="myTab" role="tablist">
+                  <li class="nav-item" role="presentation">
+                    <a class="nav-link active" id="home-tab" data-toggle="tab" href="#detail" role="tab" aria-controls="home" aria-selected="true">Detail</a>
+                  </li>
+                  <li class="nav-item" role="presentation">
+                    <a class="nav-link" id="profile-tab" data-toggle="tab" href="#students" role="tab" aria-controls="profile" aria-selected="false">Siswa</a>
+                  </li>
+                  <li class="nav-item" role="presentation">
+                    <a class="nav-link" id="contact-tab" data-toggle="tab" href="#modules" role="tab" aria-controls="contact" aria-selected="false">Modul</a>
+                  </li>
+                  <li class="nav-item" role="presentation">
+                    <a class="nav-link" id="contact-tab" data-toggle="tab" href="#schedules" role="tab" aria-controls="contact" aria-selected="false">Jadwal</a>
+                  </li>
+                  <li class="nav-item" role="presentation">
+                    <a class="nav-link" id="contact-tab" data-toggle="tab" href="#attendances" role="tab" aria-controls="contact" aria-selected="false">Kehadiran</a>
+                  </li>
+                </ul>
+                <div class="tab-content" id="myTabContent">
+                  <div class="tab-pane fade show active" id="detail" role="tabpanel" aria-labelledby="home-tab">
+                    <b>Jurusan:</b><p>NextG Software Engineering</p>
+                    <b>Periode:</b><p>Semester 2</p>
+                    <b>Tahun:</b><p>2020</p>
+                    <b>Kapasitas:</b><p>23/24</p>
+                    <b>Status:</b><p>Active</p>
+                  </div>
+                  <div class="tab-pane fade" id="students" role="tabpanel" aria-labelledby="profile-tab">
+                    <table class="table table-striped">
+                      <thead>
+                        <tr>
+                          <th>Kode</th>
+                          <th>Nama SIswa</th>
+                          <th>Status</th>
+                          <th colspan="4">Kehadiran</th>
+                          <th>Presentasi (%)</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>1820010014</td>
+                          <td>Ahmad Thorik</td>
+                          <td>Aktif</td>
+                          <td>Alfa : 2</td>
+                          <td>Izin : 1</td>
+                          <td>Sakit : 1</td>
+                          <td>Hadir : 1</td>
+                          <td><font color="red">33.33%</font></td>
+                        </tr>
+                        <tr>
+                          <td>1920010029</td>
+                          <td>Arya Ridwan</td>
+                          <td>Aktif</td>
+                          <td>Alfa : 2</td>
+                          <td>Izin : 1</td>
+                          <td>Sakit : 1</td>
+                          <td>Hadir : 1</td>
+                          <td>100.00%</td>
+                        </tr>
+                        <tr>
+                          <td>1920010036</td>
+                          <td>Berliana Izmi</td>
+                          <td>Aktif</td>
+                          <td>Alfa : 2</td>
+                          <td>Izin : 1</td>
+                          <td>Sakit : 1</td>
+                          <td>Hadir : 1</td>
+                          <td>100.00%</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+
+                  <div class="tab-pane fade" id="modules" role="tabpanel" aria-labelledby="contact-tab">
+                    <table class="table table-striped">
+                      <thead>
+                        <tr>
+                          <th>kode</th>
+                          <th ="col">Pelajaran</th>
+                          <th  ="col">Guru</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>ST001</td>
+                          <td>English</td>
+                          <td>Mr. Haggie Zain Dito</td>
+                        </tr>
+                        <tr>
+                          <td>ST002</td>
+                          <td>Science</td>
+                          <td>Mr. Fajar Siddiq Ramadhan</td>
+                        </tr>
+                        <tr>
+                          <td>ST003</td>
+                          <td>Indonesian</td>
+                          <td>Mrs. Sintya Nabilla</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+
+                  <div class="tab-pane fade" id="schedules" role="tabpanel" aria-labelledby="contact-tab">
+                    <table class="table table-striped">
+                      <thead>
+                        <tr>
+                          <th>Hari</th>
+                          <th>Modul</th>
+                          <th>Kelas</th>
+                          <th>Guru</th>
+                          <th>Mulai</th>
+                          <th>Selesai</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>Senin</th>
+                          <td>Object Oriented Programming Project</td>
+                          <td>OCR5</td>
+                          <td>KEV</td>
+                          <td>08:00:00</td>
+                          <td>12:00:00</td>
+                        </tr>
+                        <tr>
+                          <td>Selasa</td>
+                          <td>Object Oriented Programming Project</td>
+                          <td>OCR5</td>
+                          <td>KEV</td>
+                          <td>13:00:00</td>
+                          <td>17:00:00</td>
+                        </tr>
+                        <tr>
+                          <td>Rabu</td>
+                          <td>Object Oriented Programming Project</td>
+                          <td>OCR5</td>
+                          <td>KEV</td>
+                          <td>13:00:00</td>
+                          <td>17:00:00</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <div class="tab-pane fade" id="attendances" role="tabpanel" aria-labelledby="profile-tab">
+                    <table class="table table-striped">
+                      <thead>
+                        <tr>
+                          <th scope="col">Tanggal</th>
+                          <th scope="col">Hari</th>
+                          <th scope="col">Kelas</th>
+                          <th scope="col">Guru</th>
+                          <th scope="col">Waktu Mulai</th>
+                          <th scope="col">Waktu Selesai</th>
+                          <th scope="col">Deskripsi</th>
+                          <th scope="col">Kehadiran</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>2020-03-09</th>
+                          <td>Senin</td>
+                          <td>OCR5</td>
+                          <td>KEV</td>
+                          <td>08:00:00</td>
+                          <td>12:00:00</td>
+                          <td>Konsultasi ISAS</td>
+                          <td>
+                            <input type="radio" name= 'alpha' value="alpha"  >Alfa
+                            <input type="radio" name= 'alpha' value="permission"  >Izin
+                            <input type="radio" name= 'alpha' value="sick"  >Sakit
+                            <input type="radio" name= 'alpha' value="present" checked >Hadir
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>2020-03-04</td>
+                          <td>Rabu</td>
+                          <td>OCR5</td>
+                          <td>KEV</td>
+                          <td>13:00:00</td>
+                          <td>17:00:00</td>
+                          <td>Intro OOP</td>
+                          <td>
+                            <input type="radio" name= 'alpha1' value="alpha1"  >Alfa
+                            <input type="radio" name= 'alpha1' value="permission1"  >Izin
+                            <input type="radio" name= 'alpha1' value="sick1"  >Sakit
+                            <input type="radio" name= 'alpha1' value="present1" checked >Hadir
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>2020-03-03</td>
+                          <td>Rabu</td>
+                          <td>OCR5</td>
+                          <td>KEV</td>
+                          <td>13:00:00</td>
+                          <td>17:00:00</td>
+                          <td>Struktur Data dan Algoritma</td>
+                          <td>
+                            <input type="radio" name= 'alpha2' value="alpha2"  >Alfa
+                            <input type="radio" name= 'alpha2' value="permission2"  >Izin
+                            <input type="radio" name= 'alpha2' value="sick2"  >Sakit
+                            <input type="radio" name= 'alpha2' value="present2" checked >Hadir
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+            </div>
+      
+        </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="../js/Guru.js"></script>
+</body>
+</html>
